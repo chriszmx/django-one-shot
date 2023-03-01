@@ -27,7 +27,7 @@
                             {{ list.task }}
                         </td>
                         <td>
-                            {{ list.due_date}}
+                            {{ list.due_date|date:'M n, Y' }}
                         </td>
                     </tr>
                     {% endfor %}

@@ -26,7 +26,7 @@
                             <a href="{% url 'todo_list_detail' list.id %}"> {{ list.name }} </a>
                         </td>
                         <td>
-                            {{ list.created_on }}
+                            {{ list.items.all|length }}
                         </td>
                         {% endfor %}
                     </tr>
