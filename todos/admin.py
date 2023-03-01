@@ -1,5 +1,5 @@
 from django.contrib import admin
-from todo.models import TodoList
+from todos.models import TodoList
 
 # Register your models here.
 
