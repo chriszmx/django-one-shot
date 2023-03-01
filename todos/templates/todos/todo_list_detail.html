@@ -6,30 +6,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List!!!!</title>
+    <title>list items</title>
 </head>
 <body>
     <main>
         <div>
-            <h1>My Lists</h1>
+            <h1>Reminders</h1>
+            <h2>Tasks</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Number of Items</th>
+                        <th>Task</th>
+                        <th>Due Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for list in todo_lists %}
+                    {% for list in todo_lists.items.all %}
                     <tr>
                         <td>
-                            <a href="{% url 'todo_list_detail' list.id %}"> {{ list.name }} </a>
+                            {{ list.task }}
                         </td>
                         <td>
-                            {{ list.created_on }}
+                            {{ list.due_date}}
                         </td>
-                        {% endfor %}
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
