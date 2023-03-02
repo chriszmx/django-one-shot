@@ -5,7 +5,7 @@ from todos.forms import TodoListForm, TodoItemForm
 # Create your views here.
 
 
-def todo_list(request):
+def todo_list_list(request):
     todo_lists = TodoList.objects.all()
     context = {
         'todo_lists': todo_lists,
@@ -53,7 +53,7 @@ def todo_list_delete(request, id):
     name = TodoList.objects.get(id=id)
     if request.method == 'POST':
         name.delete()
-        return redirect('todo_list')
+        return redirect('todo_list_list')
     return render(request, 'todos/todo_list_delete.html')
 
 
