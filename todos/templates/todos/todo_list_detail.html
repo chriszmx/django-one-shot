@@ -13,6 +13,10 @@
         <div>
             <h1>{{ todo_lists.name }}</h1>
             <a href="{% url 'todo_list_update' todo_lists.id %}">Edit</a>
+            <div>
+            this is a gap
+            </div>
+            <a href="{% url 'todo_list_delete' todo_lists.id %}">Delete</a>
             <h2>Tasks</h2>
             <table>
                 <thead>
